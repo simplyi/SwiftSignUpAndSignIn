@@ -144,15 +144,18 @@ class LeftSideViewController: UIViewController, UITableViewDataSource, UITableVi
         
         userFullNameLabel.text = userFirstName + " " + userLastName
         
-        let profilePictureObject = PFUser.currentUser()?.objectForKey("profile_picture") as! PFFile
+        let profilePictureObject = PFUser.currentUser()?.objectForKey("profile_picture") as? PFFile
         
-        profilePictureObject.getDataInBackgroundWithBlock { (imageData:NSData?, error:NSError?) -> Void in
+        if(profilePictureObject != nil)
+        {
+          profilePictureObject!.getDataInBackgroundWithBlock { (imageData:NSData?, error:NSError?) -> Void in
             
             if(imageData != nil)
             {
                 self.userProfilePicture.image = UIImage(data: imageData!)
             }
             
+         }
         }
 
     }

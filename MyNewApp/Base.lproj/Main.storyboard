@@ -112,6 +112,15 @@
                                     <segue destination="Hfo-9b-TNX" kind="presentation" id="jCh-ap-ck2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rqs-fl-zXO">
+                                <rect key="frame" x="56" y="320" width="208" height="30"/>
+                                <state key="normal" title="Sign in with Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bq7-mx-M6g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
